@@ -1501,7 +1501,7 @@ class StringEncoded(Adapter):
         return "(%s).decode(%r)" % (self.subcon._compileparse(code), self.encoding, )
 
 
-def PaddedString(length, encoding):
+def PaddedString(length, encoding, pad_char=b"\x00"):
     r"""
     Configurable, fixed-length or variable-length string field.
 
@@ -1525,7 +1525,7 @@ def PaddedString(length, encoding):
         >>> d.parse(_)
         u'Афон'
     """
-    macro = StringEncoded(FixedSized(length, NullStripped(GreedyBytes, pad=encodingunit(encoding))), encoding)
+    macro = StringEncoded(FixedSized(length, NullStripped(GreedyBytes, pad=encodingunit(encoding)), pad_char=pad_char), encoding)
     def _emitfulltype(ksy, bitwise):
         return dict(size=length, type="strz", encoding=encoding)
     macro._emitfulltype = _emitfulltype
@@ -4563,9 +4563,10 @@ class FixedSized(Subconstruct):
         10
     """
 
-    def __init__(self, length, subcon):
+    def __init__(self, length, subcon, pad_char=b"\x00"):
         super(FixedSized, self).__init__(subcon)
         self.length = length
+        self.pad_char = pad_char
 
     def _parse(self, stream, context, path):
         length = evaluate(self.length, context)
@@ -4589,7 +4590,7 @@ class FixedSized(Subconstruct):
         if pad < 0:
             raise PaddingError("subcon build %d bytes but was allowed only %d" % (len(data), length))
         stream_write(stream, data)
-        stream_write(stream, bytes(pad))
+        stream_write(stream, self.pad_char * pad)
         return buildret
 
     def _sizeof(self, context, path):
