@@ -1,5 +1,5 @@
 from declarativeunittest import *
-from construct.lib.bitstream import *
+from shio.lib.bitstream import *
 
 
 def test_restreamed():

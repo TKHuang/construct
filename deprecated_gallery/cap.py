@@ -4,7 +4,7 @@
 # https://wiki.wireshark.org/Development/LibpcapFileFormat
 ##############################################################
 
-from construct import *
+from shio import *
 import time, datetime
 
 

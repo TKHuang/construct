@@ -7,7 +7,7 @@ Original code contributed by Robin Munn (rmunn at pobox dot com)
 coding conventions)
 """
 
-from construct import *
+from shio import *
 
 #===============================================================================
 # utils

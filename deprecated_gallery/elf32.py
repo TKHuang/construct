@@ -5,7 +5,7 @@ Used on Unix systems as a replacement of the older a.out format.
 Big-endian support kindly submitted by Craig McQueen (mcqueen-c#edsrd1!yzk!co!jp).
 """
 
-from construct import *
+from shio import *
 
 
 def elf32_body(ElfInt16, ElfInt32):

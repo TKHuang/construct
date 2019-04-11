@@ -2,7 +2,7 @@
 Windows/OS2 Bitmap (BMP) this could have been a perfect show-case file format, but they had to make it ugly (all sorts of alignments)
 """
 
-from construct import *
+from shio import *
 
 #===============================================================================
 # pixels: uncompressed

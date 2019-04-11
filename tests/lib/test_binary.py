@@ -1,5 +1,5 @@
 from declarativeunittest import *
-from construct.lib.binary import *
+from shio.lib.binary import *
 
 
 def test_integer2bits():

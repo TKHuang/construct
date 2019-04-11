@@ -1,0 +1,4 @@
+Timeit measurements:
+parsing:           0.0031914163 sec/call
+parsing compiled:  failed
+building:          0.0023881266 sec/call

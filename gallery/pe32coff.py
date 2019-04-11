@@ -1,4 +1,4 @@
-from construct import *
+from shio import *
 
 docs = """
 PE/COFF format as used on Windows to store EXE DLL SYS files. This includes 64-bit and .NET code.

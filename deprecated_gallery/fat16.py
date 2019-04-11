@@ -15,7 +15,7 @@ example:
 
 import numbers
 from io import BytesIO, BufferedReader
-from construct import *
+from shio import *
 
 Fat16Header = Struct(
     "jumpInstruction" / Bytes(3),

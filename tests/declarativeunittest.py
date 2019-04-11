@@ -5,8 +5,8 @@ skipif = pytest.mark.skipif
 
 import os, math, random, collections, itertools, io, hashlib, binascii
 
-from construct import *
-from construct.lib import *
+from shio import *
+from shio.lib import *
 
 ontravis = "TRAVIS" in os.environ
 ident = lambda x: x

@@ -1,4 +1,4 @@
-from construct.lib.py3compat import *
+from shio.lib.py3compat import *
 import binascii
 
 

@@ -6,7 +6,7 @@ Homepage:
     http://construct.readthedocs.org
 
 Hands-on example:
-    >>> from construct import *
+    >>> from shio import *
     >>> s = Struct(
     ...     "a" / Byte,
     ...     "b" / Short,
@@ -19,11 +19,11 @@ Hands-on example:
     b"\x01\x02\x03"
 """
 
-from construct.core import *
-from construct.expr import *
-from construct.debug import *
-from construct.version import *
-from construct import lib
+from shio.core import *
+from shio.expr import *
+from shio.debug import *
+from shio.version import *
+from shio import lib
 
 
 #===============================================================================

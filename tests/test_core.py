@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from declarativeunittest import *
-from construct import *
-from construct.lib import *
+from shio import *
+from shio.lib import *
 
 
 def test_bytes():

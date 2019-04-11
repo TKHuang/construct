@@ -2,7 +2,7 @@
 Enhanced Meta File
 """
 
-from construct import *
+from shio import *
 
 record_type = Enum(Int32ul,
     ABORTPATH = 68,

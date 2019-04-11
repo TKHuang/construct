@@ -2,7 +2,7 @@
 Windows Meta File
 """
 
-from construct import *
+from shio import *
 
 
 wmf_record = Struct(

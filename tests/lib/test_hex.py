@@ -1,5 +1,5 @@
 from declarativeunittest import *
-from construct.lib.hex import *
+from shio.lib.hex import *
 
 
 def test_hexdump():
